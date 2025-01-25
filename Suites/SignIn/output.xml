@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-25T12:09:01.816832" rpa="false" schemaversion="5">
+<suite id="s1" name="SignIn" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites\SignIn\SignIn.robot">
+<test id="s1-t1" name="Open Application" line="13">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-01-25T12:09:01.951491" elapsed="8.334845"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-25T12:09:15.288038" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-25T12:09:10.286900" elapsed="5.001249"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-01-25T12:09:15.586442" level="INFO">Current page contains element 'xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2025-01-25T12:09:15.586510" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-01-25T12:09:15.288456" elapsed="0.298087"/>
+</kw>
+<doc>Membuka aplikasi dan memverifikasi bahwa aplikasi terbuka dengan benar</doc>
+<status status="PASS" start="2025-01-25T12:09:01.950688" elapsed="13.636146"/>
+</test>
+<test id="s1-t2" name="Click Login Button" line="19">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-25T12:09:15.588399" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
+<msg time="2025-01-25T12:09:15.700396" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-25T12:09:15.587747" elapsed="0.112747"/>
+</kw>
+<doc>Mengklik tombol login</doc>
+<status status="PASS" start="2025-01-25T12:09:15.587384" elapsed="0.113417"/>
+</test>
+<test id="s1-t3" name="Type Username" line="23">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-25T12:09:17.702552" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-25T12:09:15.701836" elapsed="2.000826"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-25T12:09:17.703765" level="INFO">Typing text 'Manarul' into text field 'xpath=//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
+<msg time="2025-01-25T12:09:17.799203" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</arg>
+<arg>Manarul</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-25T12:09:17.702941" elapsed="0.096343"/>
+</kw>
+<doc>Mengetik username "Manarul"</doc>
+<status status="PASS" start="2025-01-25T12:09:15.701424" elapsed="2.098134"/>
+</test>
+<status status="PASS" start="2025-01-25T12:09:01.818157" elapsed="15.982178"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SignIn" id="s1" pass="3" fail="0" skip="0">SignIn</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
