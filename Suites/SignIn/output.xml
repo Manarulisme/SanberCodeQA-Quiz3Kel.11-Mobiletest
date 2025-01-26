@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-25T12:24:17.146051" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-27T00:20:45.626251" rpa="false" schemaversion="5">
 <suite id="s1" name="SignIn" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites\SignIn\SignIn.robot">
-<test id="s1-t1" name="Open Application" line="13">
+<test id="s1-t1" name="Buka Aplikasi dan Klik Sign In" line="13">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
@@ -16,65 +16,295 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-01-25T12:24:17.263337" elapsed="8.819243"/>
+<status status="PASS" start="2025-01-27T00:20:45.771510" elapsed="9.987601"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-25T12:24:31.083825" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-01-27T00:21:00.760463" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-25T12:24:26.083097" elapsed="5.000838"/>
+<status status="PASS" start="2025-01-27T00:20:55.759505" elapsed="5.001061"/>
 </kw>
-<kw name="Page Should Contain Element" owner="AppiumLibrary">
-<msg time="2025-01-25T12:24:31.365376" level="INFO">Current page contains element 'xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
-<msg time="2025-01-25T12:24:31.365446" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
-<arg>xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]</arg>
-<doc>Verifies that current page contains `locator` element.</doc>
-<status status="PASS" start="2025-01-25T12:24:31.084197" elapsed="0.281282"/>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:01.163084" level="INFO">xpath criteria: //android.widget.Button[@text='Sign In']</msg>
+<arg>xpath=//android.widget.Button[@text='Sign In']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-27T00:21:00.760880" elapsed="0.402305"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:01.216208" level="INFO">Current page contains text 'Sign In'.</msg>
+<arg>Sign In</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-27T00:21:01.163528" elapsed="0.052753"/>
 </kw>
 <doc>Membuka aplikasi dan memverifikasi bahwa aplikasi terbuka dengan benar</doc>
-<status status="PASS" start="2025-01-25T12:24:17.262637" elapsed="14.103067"/>
+<status status="PASS" start="2025-01-27T00:20:45.770805" elapsed="15.445783"/>
 </test>
-<test id="s1-t2" name="Click Login Button" line="19">
+<test id="s1-t2" name="Akses Menu Sign In" line="20">
+<kw name="Click Login Button" owner="SignIn_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T00:21:01.218224" level="INFO">Load YAML E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage/../../PageObjects/SignInPage/SignIn_Page.yaml</msg>
+<arg>${elements}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T00:21:01.218083" elapsed="0.000204"/>
+</kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-01-25T12:24:31.367004" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]'.</msg>
-<msg time="2025-01-25T12:24:31.467842" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.example.myapplication:id/login"]</msg>
-<arg>xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/login"]</arg>
+<msg time="2025-01-27T00:21:01.218990" level="FAIL">Variable '${login_button}' not found.</msg>
+<arg>${login_button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-01-25T12:24:31.366391" elapsed="0.101546"/>
+<status status="FAIL" start="2025-01-27T00:21:01.218389" elapsed="0.000644">Variable '${login_button}' not found.</status>
+</kw>
+<status status="FAIL" start="2025-01-27T00:21:01.217746" elapsed="0.001421">Variable '${login_button}' not found.</status>
 </kw>
 <doc>Mengklik tombol login</doc>
-<status status="PASS" start="2025-01-25T12:24:31.366141" elapsed="0.102103"/>
+<status status="FAIL" start="2025-01-27T00:21:01.217202" elapsed="0.002183">Variable '${login_button}' not found.</status>
 </test>
-<test id="s1-t3" name="Type Username" line="23">
+<test id="s1-t3" name="Positif Sign In Test" line="25">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-25T12:24:33.470362" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-01-27T00:21:03.221402" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-25T12:24:31.469243" elapsed="2.001248"/>
+<status status="PASS" start="2025-01-27T00:21:01.220431" elapsed="2.001096"/>
 </kw>
+<kw name="Type Username" owner="SignIn_Keywords">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-01-25T12:24:33.471643" level="INFO">Typing text 'Manarul' into text field 'xpath=//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]'</msg>
-<msg time="2025-01-25T12:24:33.550436" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</msg>
-<arg>xpath=//android.widget.EditText[@resource-id="com.example.myapplication:id/username"]</arg>
-<arg>Manarul</arg>
+<msg time="2025-01-27T00:21:03.222513" level="FAIL">Variable '${username_field}' not found.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-01-25T12:24:33.470795" elapsed="0.079722"/>
+<status status="FAIL" start="2025-01-27T00:21:03.222151" elapsed="0.000388">Variable '${username_field}' not found.</status>
 </kw>
-<doc>Mengetik username "Manarul"</doc>
-<status status="PASS" start="2025-01-25T12:24:31.468866" elapsed="2.081920"/>
+<arg>support@ngendigital.com</arg>
+<status status="FAIL" start="2025-01-27T00:21:03.221883" elapsed="0.000733">Variable '${username_field}' not found.</status>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>abc123</arg>
+<status status="NOT RUN" start="2025-01-27T00:21:03.222779" elapsed="0.000027"/>
+</kw>
+<kw name="Click Sign In Button" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:03.222935" elapsed="0.000015"/>
+</kw>
+<kw name="Verify Welcome Text" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:03.223057" elapsed="0.000016"/>
+</kw>
+<doc>Mengetik username "support@ngendigital.com" dan password "abc123"</doc>
+<status status="FAIL" start="2025-01-27T00:21:01.220061" elapsed="2.003141">Variable '${username_field}' not found.</status>
 </test>
-<status status="PASS" start="2025-01-25T12:24:17.147042" elapsed="16.404594"/>
+<test id="s1-t4" name="Negatif Sign In Test - Username Benar Password Salah" line="33">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:21:05.224548" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:21:03.224138" elapsed="2.000527"/>
+</kw>
+<kw name="Type Username" owner="SignIn_Keywords">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:05.225829" level="FAIL">Variable '${username_field}' not found.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="FAIL" start="2025-01-27T00:21:05.225270" elapsed="0.000596">Variable '${username_field}' not found.</status>
+</kw>
+<arg>support@ngendigital.com</arg>
+<status status="FAIL" start="2025-01-27T00:21:05.225001" elapsed="0.000961">Variable '${username_field}' not found.</status>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>def123</arg>
+<status status="NOT RUN" start="2025-01-27T00:21:05.226164" elapsed="0.000021"/>
+</kw>
+<kw name="Click Sign In Button" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:05.226321" elapsed="0.000015"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="NOT RUN" start="2025-01-27T00:21:05.226437" elapsed="0.000013"/>
+</kw>
+<doc>Mengetik username "support@ngendigital.com" dan password "abc123"</doc>
+<status status="FAIL" start="2025-01-27T00:21:03.223779" elapsed="2.002809">Variable '${username_field}' not found.</status>
+</test>
+<test id="s1-t5" name="Negatif Sign In Test - Username Salah Password Benar" line="41">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:21:07.227796" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:21:05.227419" elapsed="2.000463"/>
+</kw>
+<kw name="Type Username" owner="SignIn_Keywords">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:07.229478" level="FAIL">Variable '${username_field}' not found.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="FAIL" start="2025-01-27T00:21:07.228946" elapsed="0.000569">Variable '${username_field}' not found.</status>
+</kw>
+<arg>nosupport@ngendigital.com</arg>
+<status status="FAIL" start="2025-01-27T00:21:07.228208" elapsed="0.001401">Variable '${username_field}' not found.</status>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>abc123</arg>
+<status status="NOT RUN" start="2025-01-27T00:21:07.229806" elapsed="0.000019"/>
+</kw>
+<kw name="Click Sign In Button" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:07.229965" elapsed="0.000015"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="NOT RUN" start="2025-01-27T00:21:07.230175" elapsed="0.000015"/>
+</kw>
+<doc>Mengetik username "nosupport@ngendigital.com" dan password "abc123"</doc>
+<status status="FAIL" start="2025-01-27T00:21:05.227147" elapsed="2.003199">Variable '${username_field}' not found.</status>
+</test>
+<test id="s1-t6" name="Negatif Sign In Test - Username Salah Password Salah" line="49">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:21:09.232266" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:21:07.231288" elapsed="2.001069"/>
+</kw>
+<kw name="Type Username" owner="SignIn_Keywords">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:09.233160" level="FAIL">Variable '${username_field}' not found.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="FAIL" start="2025-01-27T00:21:09.232830" elapsed="0.000353">Variable '${username_field}' not found.</status>
+</kw>
+<arg>abc@ngendigital.com</arg>
+<status status="FAIL" start="2025-01-27T00:21:09.232633" elapsed="0.000618">Variable '${username_field}' not found.</status>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>def123</arg>
+<status status="NOT RUN" start="2025-01-27T00:21:09.233396" elapsed="0.000016"/>
+</kw>
+<kw name="Click Sign In Button" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:09.233514" elapsed="0.000013"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="NOT RUN" start="2025-01-27T00:21:09.233611" elapsed="0.000011"/>
+</kw>
+<doc>Mengetik username "abc@ngendigital.com" dan password "def123"</doc>
+<status status="FAIL" start="2025-01-27T00:21:07.230941" elapsed="2.002792">Variable '${username_field}' not found.</status>
+</test>
+<test id="s1-t7" name="Negatif Sign In Test - Username Kosong Password Benar" line="57">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:21:11.235100" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:21:09.234422" elapsed="2.000794"/>
+</kw>
+<kw name="Type Username" owner="SignIn_Keywords">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:11.236599" level="FAIL">Variable '${username_field}' not found.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="FAIL" start="2025-01-27T00:21:11.236077" elapsed="0.000559">Variable '${username_field}' not found.</status>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="FAIL" start="2025-01-27T00:21:11.235514" elapsed="0.001218">Variable '${username_field}' not found.</status>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>abc123</arg>
+<status status="NOT RUN" start="2025-01-27T00:21:11.236955" elapsed="0.000031"/>
+</kw>
+<kw name="Click Sign In Button" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:11.237171" elapsed="0.000017"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="NOT RUN" start="2025-01-27T00:21:11.237302" elapsed="0.000014"/>
+</kw>
+<doc>Mengetik username "" dan password "abc123"</doc>
+<status status="FAIL" start="2025-01-27T00:21:09.234190" elapsed="2.003273">Variable '${username_field}' not found.</status>
+</test>
+<test id="s1-t8" name="Negatif Sign In Test - Username Benar Password Kosong" line="65">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:21:13.239166" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:21:11.238306" elapsed="2.000954"/>
+</kw>
+<kw name="Type Username" owner="SignIn_Keywords">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:13.240463" level="FAIL">Variable '${username_field}' not found.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="FAIL" start="2025-01-27T00:21:13.239906" elapsed="0.000595">Variable '${username_field}' not found.</status>
+</kw>
+<arg>support@ngendigital.com</arg>
+<status status="FAIL" start="2025-01-27T00:21:13.239612" elapsed="0.000983">Variable '${username_field}' not found.</status>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>${EMPTY}</arg>
+<status status="NOT RUN" start="2025-01-27T00:21:13.240810" elapsed="0.000021"/>
+</kw>
+<kw name="Click Sign In Button" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:13.240992" elapsed="0.000015"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="NOT RUN" start="2025-01-27T00:21:13.241116" elapsed="0.000015"/>
+</kw>
+<doc>Mengetik username "support@ngendigital.com" dan password ""</doc>
+<status status="FAIL" start="2025-01-27T00:21:11.238025" elapsed="2.003242">Variable '${username_field}' not found.</status>
+</test>
+<test id="s1-t9" name="Negatif Sign In Test - Username Kosong Password Kosong" line="73">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T00:21:15.243307" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T00:21:13.242150" elapsed="2.001242"/>
+</kw>
+<kw name="Type Username" owner="SignIn_Keywords">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-27T00:21:15.244869" level="FAIL">Variable '${username_field}' not found.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="FAIL" start="2025-01-27T00:21:15.244322" elapsed="0.000587">Variable '${username_field}' not found.</status>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="FAIL" start="2025-01-27T00:21:15.243717" elapsed="0.001306">Variable '${username_field}' not found.</status>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>${EMPTY}</arg>
+<status status="NOT RUN" start="2025-01-27T00:21:15.245337" elapsed="0.000038"/>
+</kw>
+<kw name="Click Sign In Button" owner="SignIn_Keywords">
+<status status="NOT RUN" start="2025-01-27T00:21:15.245578" elapsed="0.000021"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="NOT RUN" start="2025-01-27T00:21:15.245737" elapsed="0.000015"/>
+</kw>
+<doc>Mengetik username "" dan password ""</doc>
+<status status="FAIL" start="2025-01-27T00:21:13.241834" elapsed="2.004061">Variable '${username_field}' not found.</status>
+</test>
+<status status="FAIL" start="2025-01-27T00:20:45.627311" elapsed="29.619352"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="8" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="SignIn" id="s1" pass="3" fail="0" skip="0">SignIn</stat>
+<stat name="SignIn" id="s1" pass="1" fail="8" skip="0">SignIn</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-01-27T00:20:45.767071" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 7: Setting variable '${login_button}' failed: Resolving variable '${elements['elements']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:20:45.767948" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 9: Setting variable '${password_field}' failed: Resolving variable '${elements['elements']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:20:45.768553" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 10: Setting variable '${sign_in_button}' failed: Resolving variable '${elements['elements']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:20:45.769136" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 8: Setting variable '${username_field}' failed: Resolving variable '${elements['elements']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:20:45.769879" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 11: Setting variable '${welcome_text}' failed: Resolving variable '${elements['elements']}' failed: TypeError: string indices must be integers, not 'str'</msg>
 </errors>
 </robot>

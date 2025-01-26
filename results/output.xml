@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-27T00:05:10.627057" rpa="false" schemaversion="5">
+<suite id="s1" name="SanberCodeQA-Quiz3Kel.11-Mobiletest" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest">
+<suite id="s1-s1" name="Suites" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites">
+<suite id="s1-s1-s1" name="SignIn" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites\SignIn">
+<suite id="s1-s1-s1-s1" name="SignIn" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites\SignIn\SignIn.robot">
+<test id="s1-s1-s1-s1-t1" name="Akses Menu Sign In" line="20">
+<kw name="Click Login Button" owner="SignIn_Keywords">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T00:05:10.872731" level="INFO">Load YAML E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage/../../PageObjects/SignInPage/SignIn_Page.yaml</msg>
+<arg>${elements}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T00:05:10.872347" elapsed="0.000577"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-27T00:05:10.873985" level="FAIL">Variable '${login_button}' not found.</msg>
+<arg>${login_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="FAIL" start="2025-01-27T00:05:10.873141" elapsed="0.001283">Variable '${login_button}' not found.</status>
+</kw>
+<status status="FAIL" start="2025-01-27T00:05:10.871252" elapsed="0.003411">Variable '${login_button}' not found.</status>
+</kw>
+<doc>Mengklik tombol login</doc>
+<status status="FAIL" start="2025-01-27T00:05:10.870325" elapsed="0.004723">Variable '${login_button}' not found.</status>
+</test>
+<status status="FAIL" start="2025-01-27T00:05:10.660174" elapsed="0.216258"/>
+</suite>
+<status status="FAIL" start="2025-01-27T00:05:10.658028" elapsed="0.219622"/>
+</suite>
+<status status="FAIL" start="2025-01-27T00:05:10.655409" elapsed="0.289411"/>
+</suite>
+<status status="FAIL" start="2025-01-27T00:05:10.630716" elapsed="0.315562"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SanberCodeQA-Quiz3Kel.11-Mobiletest" id="s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest</stat>
+<stat name="Suites" id="s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites</stat>
+<stat name="SignIn" id="s1-s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites.SignIn</stat>
+<stat name="SignIn" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites.SignIn.SignIn</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-27T00:05:10.862091" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 7: Setting variable '${login_button}' failed: Resolving variable '${elements['elements']['login_button']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:05:10.863788" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 9: Setting variable '${password_field}' failed: Resolving variable '${elements['elements']['password_field']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:05:10.865099" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 10: Setting variable '${sign_in_button}' failed: Resolving variable '${elements['elements']['sign_in_button']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:05:10.867017" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 8: Setting variable '${username_field}' failed: Resolving variable '${elements['elements']['username_field']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-01-27T00:05:10.868464" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 11: Setting variable '${welcome_text}' failed: Resolving variable '${elements['elements']['welcome_text']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+</errors>
+</robot>

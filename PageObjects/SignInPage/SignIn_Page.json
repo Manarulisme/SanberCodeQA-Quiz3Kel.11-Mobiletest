@@ -1,0 +1,9 @@
+{
+  "elements": {
+    "login_button": "xpath=//*[@resource-id=\"com.example.myapplication:id/login\"]",
+    "username_field": "xpath=//*[@resource-id=\"com.example.myapplication:id/username\"]",
+    "password_field": "xpath=//*[@resource-id=\"com.example.myapplication:id/password\"]",
+    "sign_in_button": "xpath=//*[@resource-id=\"com.example.myapplication:id/signIn\"]",
+    "welcome_text": "xpath=//*[@resource-id=\"com.example.myapplication:id/textView\"]"
+  }
+}
