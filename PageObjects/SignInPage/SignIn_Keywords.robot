@@ -17,6 +17,7 @@ Click Login Button
 
 Type Username
     [Arguments]    ${username}
+    Wait Until Element Is Visible    ${username_field}
     Input Text    ${username_field}    ${username}
 
 Type Password
