@@ -1,0 +1,21 @@
+booking_btn:  //android.widget.Button[@resource-id="com.example.myapplication:id/button5"]
+booking_btn_login:  //android.widget.Button[@resource-id="com.example.myapplication:id/book"]
+from_city_field:  //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerFrom"]
+from_city_choose_field:  //android.widget.TextView[@resource-id="android:id/text1" and @text="{value}"]
+to_city_field:  //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerTo"]
+to_city_choose_field:  //android.widget.TextView[@resource-id="android:id/text1" and @text="{value}"]
+class_field:  //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerClass"]
+class_choose_field:  //android.widget.TextView[@resource-id="android:id/text1" and @text="{value}"]
+start_date_field: 'id=com.example.myapplication:id/textStartDate'
+set_start_date_field: '//*[@content-desc="{value}"]'
+end_date_field: 'id=com.example.myapplication:id/textEndDate'
+set_end_date_field: '//*[@content-desc="{value}"]'
+ok_date_button_field: '//*[@resource-id="android:id/button1"]'
+option_flight_radio_field: //android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlight"]
+option_flight_hotel_radio_field: //android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlightHotel"]
+option_plus_minus_1_day_checkbox_field: //android.widget.CheckBox[@resource-id="com.example.myapplication:id/checkBoxDay"]
+book_btn_field: //android.widget.Button[@resource-id="com.example.myapplication:id/book_flight"]
+confirm_booking_form_view: //android.widget.TextView[@resource-id="com.example.myapplication:id/textView6"]
+set_price_booking_confirmation: //android.widget.Button[@resource-id="com.example.myapplication:id/price{value}"]
+confirm_booking_confirmation: //android.widget.Button[@resource-id="com.example.myapplication:id/confirm_order"]
+after_booking_form_view: //android.widget.CheckedTextView[@resource-id="com.example.myapplication:id/checkedTextView"]
