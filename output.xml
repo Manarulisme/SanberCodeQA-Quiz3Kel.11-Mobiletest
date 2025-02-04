@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on darwin)" generated="2025-01-31T14:12:44.076009" rpa="false" schemaversion="5">
+<suite id="s1" name="Search" source="/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/Suites/Search/search.robot">
+<test id="s1-t1" name="User perform searches without Sign In" line="37">
+<kw name="Open Flight Application">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.example.myapplication</arg>
+<arg>appActivity=com.example.myapplication.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-01-31T14:12:44.563210" elapsed="13.064484"/>
+</kw>
+<status status="PASS" start="2025-01-31T14:12:44.561550" elapsed="13.066494"/>
+</kw>
+<kw name="Verify Home Screen Appears">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-31T14:12:59.231553" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]</msg>
+<arg>locator=//android.widget.ImageView[@resource-id="com.example.myapplication:id/imageView4"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-31T14:12:57.629383" elapsed="1.602348"/>
+</kw>
+<status status="PASS" start="2025-01-31T14:12:57.628672" elapsed="1.603206"/>
+</kw>
+<kw name="Close Flight Application">
+<kw name="Close All Applications" owner="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" start="2025-01-31T14:12:59.232918" elapsed="0.961428"/>
+</kw>
+<status status="PASS" start="2025-01-31T14:12:59.232364" elapsed="0.962198"/>
+</kw>
+<status status="PASS" start="2025-01-31T14:12:44.559761" elapsed="15.635485"/>
+</test>
+<status status="PASS" start="2025-01-31T14:12:44.078134" elapsed="16.117990"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Search" id="s1" pass="1" fail="0" skip="0">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

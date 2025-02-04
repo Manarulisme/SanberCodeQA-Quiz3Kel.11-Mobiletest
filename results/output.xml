@@ -1,35 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-27T00:05:10.627057" rpa="false" schemaversion="5">
-<suite id="s1" name="SanberCodeQA-Quiz3Kel.11-Mobiletest" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest">
-<suite id="s1-s1" name="Suites" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites">
-<suite id="s1-s1-s1" name="SignIn" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites\SignIn">
-<suite id="s1-s1-s1-s1" name="SignIn" source="E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\Suites\SignIn\SignIn.robot">
-<test id="s1-s1-s1-s1-t1" name="Akses Menu Sign In" line="20">
-<kw name="Click Login Button" owner="SignIn_Keywords">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-01-27T00:05:10.872731" level="INFO">Load YAML E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage/../../PageObjects/SignInPage/SignIn_Page.yaml</msg>
-<arg>${elements}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-27T00:05:10.872347" elapsed="0.000577"/>
+<robot generator="Robot 7.2 (Python 3.9.6 on darwin)" generated="2025-02-04T09:50:16.489538" rpa="false" schemaversion="5">
+<suite id="s1" name="SanberCodeQA-Quiz3Kel.11-Mobiletest" source="/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest">
+<suite id="s1-s1" name="Suites" source="/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/Suites">
+<suite id="s1-s1-s1" name="Search" source="/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/Suites/Search">
+<suite id="s1-s1-s1-s1" name="Search" source="/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/Suites/Search/search.robot">
+<test id="s1-s1-s1-s1-t1" name="User perform searches with Sign In" line="50">
+<kw name="Open Flight Application">
+<kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-02-04T09:50:37.522066" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-02-04T09:50:37.521130" elapsed="0.040231">No application is open</status>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-01-27T00:05:10.873985" level="FAIL">Variable '${login_button}' not found.</msg>
-<arg>${login_button}</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="FAIL" start="2025-01-27T00:05:10.873141" elapsed="0.001283">Variable '${login_button}' not found.</status>
+<msg time="2025-02-04T09:50:37.563819" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-02-04T09:50:37.567427" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+    at getResponseForW3CError (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</msg>
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=9</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.example.myapplication</arg>
+<arg>appActivity=com.example.myapplication.MainActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2025-02-04T09:50:17.165303" elapsed="20.415129">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+    at getResponseForW3CError (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</status>
 </kw>
-<status status="FAIL" start="2025-01-27T00:05:10.871252" elapsed="0.003411">Variable '${login_button}' not found.</status>
+<status status="FAIL" start="2025-02-04T09:50:17.163954" elapsed="20.417015">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+    at getResponseForW3CError (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</status>
 </kw>
-<doc>Mengklik tombol login</doc>
-<status status="FAIL" start="2025-01-27T00:05:10.870325" elapsed="0.004723">Variable '${login_button}' not found.</status>
+<kw name="Verify Home Screen Appears">
+<status status="NOT RUN" start="2025-02-04T09:50:37.584137" elapsed="0.002122"/>
+</kw>
+<kw name="Click Sign In Button">
+<status status="NOT RUN" start="2025-02-04T09:50:37.589101" elapsed="0.000366"/>
+</kw>
+<kw name="Type Username" owner="SignIn_Keywords">
+<arg>username=support@ngendigital.com</arg>
+<status status="NOT RUN" start="2025-02-04T09:50:37.591185" elapsed="0.000299"/>
+</kw>
+<kw name="Type Password" owner="SignIn_Keywords">
+<arg>password=abc123</arg>
+<status status="NOT RUN" start="2025-02-04T09:50:37.592150" elapsed="0.000228"/>
+</kw>
+<kw name="Click Search">
+<status status="NOT RUN" start="2025-02-04T09:50:37.592964" elapsed="0.000203"/>
+</kw>
+<kw name="Close Flight Application">
+<status status="NOT RUN" start="2025-02-04T09:50:37.593829" elapsed="0.001300"/>
+</kw>
+<status status="FAIL" start="2025-02-04T09:50:17.149739" elapsed="20.448287">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20237ms.
+    at getResponseForW3CError (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:804:9)
+    at asyncHandler (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:380:37)</status>
 </test>
-<status status="FAIL" start="2025-01-27T00:05:10.660174" elapsed="0.216258"/>
+<status status="FAIL" start="2025-02-04T09:50:16.576707" elapsed="21.026011"/>
 </suite>
-<status status="FAIL" start="2025-01-27T00:05:10.658028" elapsed="0.219622"/>
+<status status="FAIL" start="2025-02-04T09:50:16.566020" elapsed="21.040684"/>
 </suite>
-<status status="FAIL" start="2025-01-27T00:05:10.655409" elapsed="0.289411"/>
+<status status="FAIL" start="2025-02-04T09:50:16.557588" elapsed="21.055378"/>
 </suite>
-<status status="FAIL" start="2025-01-27T00:05:10.630716" elapsed="0.315562"/>
+<status status="FAIL" start="2025-02-04T09:50:16.502907" elapsed="21.134301"/>
 </suite>
 <statistics>
 <total>
@@ -40,15 +86,29 @@
 <suite>
 <stat name="SanberCodeQA-Quiz3Kel.11-Mobiletest" id="s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest</stat>
 <stat name="Suites" id="s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites</stat>
-<stat name="SignIn" id="s1-s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites.SignIn</stat>
-<stat name="SignIn" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites.SignIn.SignIn</stat>
+<stat name="Search" id="s1-s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites.Search</stat>
+<stat name="Search" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">SanberCodeQA-Quiz3Kel.11-Mobiletest.Suites.Search.Search</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-01-27T00:05:10.862091" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 7: Setting variable '${login_button}' failed: Resolving variable '${elements['elements']['login_button']}' failed: TypeError: string indices must be integers, not 'str'</msg>
-<msg time="2025-01-27T00:05:10.863788" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 9: Setting variable '${password_field}' failed: Resolving variable '${elements['elements']['password_field']}' failed: TypeError: string indices must be integers, not 'str'</msg>
-<msg time="2025-01-27T00:05:10.865099" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 10: Setting variable '${sign_in_button}' failed: Resolving variable '${elements['elements']['sign_in_button']}' failed: TypeError: string indices must be integers, not 'str'</msg>
-<msg time="2025-01-27T00:05:10.867017" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 8: Setting variable '${username_field}' failed: Resolving variable '${elements['elements']['username_field']}' failed: TypeError: string indices must be integers, not 'str'</msg>
-<msg time="2025-01-27T00:05:10.868464" level="ERROR">Error in file 'E:\Pelatihan\Sanbercode - Quality Assurance\SanberCodeQA-Quiz3Kel.11-Mobiletest\PageObjects\SignInPage\SignIn_Keywords.robot' on line 11: Setting variable '${welcome_text}' failed: Resolving variable '${elements['elements']['welcome_text']}' failed: TypeError: string indices must be integers, not 'str'</msg>
+<msg time="2025-02-04T09:50:17.110794" level="ERROR">Error in file '/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/PageObjects/SignInPage/SignIn_Keywords.robot' on line 3: Importing library 'yaml' failed: ModuleNotFoundError: No module named 'yaml'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/lib
+  /Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/resources
+  /Users/user/.vscode/extensions/d-biehl.robotcode-0.108.0/bundled/libs
+  /Users/user/.vscode/extensions/d-biehl.robotcode-0.108.0/bundled/tool/robotcode
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python39.zip
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /Users/user/Library/Python/3.9/lib/python/site-packages
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site-packages</msg>
+<msg time="2025-02-04T09:50:17.113328" level="ERROR">Error in file '/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/PageObjects/SearchPage/searchPage.robot' on line 6: Setting variable '${login_button}' failed: Resolving variable '${elements['elements']['login_button']}' failed: TypeError: string indices must be integers</msg>
+<msg time="2025-02-04T09:50:17.114879" level="ERROR">Error in file '/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/PageObjects/SearchPage/searchPage.robot' on line 8: Setting variable '${password_field}' failed: Resolving variable '${elements['elements']['password_field']}' failed: TypeError: string indices must be integers</msg>
+<msg time="2025-02-04T09:50:17.116562" level="ERROR">Error in file '/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/PageObjects/SearchPage/searchPage.robot' on line 9: Setting variable '${sign_in_button}' failed: Resolving variable '${elements['elements']['sign_in_button']}' failed: TypeError: string indices must be integers</msg>
+<msg time="2025-02-04T09:50:17.126241" level="ERROR">Error in file '/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/PageObjects/SearchPage/searchPage.robot' on line 7: Setting variable '${username_field}' failed: Resolving variable '${elements['elements']['username_field']}' failed: TypeError: string indices must be integers</msg>
+<msg time="2025-02-04T09:50:17.132687" level="ERROR">Error in file '/Users/user/Desktop/test_mobile/SanberCodeQA-Quiz3Kel.11-Mobiletest/PageObjects/SearchPage/searchPage.robot' on line 10: Setting variable '${welcome_text}' failed: Resolving variable '${elements['elements']['welcome_text']}' failed: TypeError: string indices must be integers</msg>
+<msg time="2025-02-04T09:50:37.563819" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
