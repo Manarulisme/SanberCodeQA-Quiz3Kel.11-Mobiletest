@@ -1,7 +1,6 @@
 # Booking Id : DA935
 # Featur by Muhammad-Fahry
 
-
 *** Settings ***
 Library    AppiumLibrary
 
@@ -42,6 +41,10 @@ Input Search Flight
     wait until page contains element    //android.widget.EditText[@resource-id="com.example.myapplication:id/flight_number"]    timeout=15s
     Input Text    //android.widget.EditText[@resource-id="com.example.myapplication:id/flight_number"]    DA935
 
+Input Search Flight 1
+    wait until page contains element    //android.widget.EditText[@resource-id="com.example.myapplication:id/flight_number"]    timeout=15s
+    Input Text    //android.widget.EditText[@resource-id="com.example.myapplication:id/flight_number"]    DA935
+
 Click Button Search
     wait until page contains element    //android.widget.Button[@resource-id="com.example.myapplication:id/searchFlight"]    timeout=15s
     Click Element    //android.widget.Button[@resource-id="com.example.myapplication:id/searchFlight"]
@@ -68,5 +71,16 @@ Search
     Click Sign In Button
     Click Button Search Flight
     Input Search Flight
+    Click Button Search
+    Close flight Application
+
+Search 1
+    Open My App
+    Verify Home Screen Appears
+    Click Sign In Button On Home Screen
+    Input Form Name
+    Click Sign In Button
+    Click Button Search Flight
+    Input Search Flight 1
     Click Button Search
     Close flight Application
